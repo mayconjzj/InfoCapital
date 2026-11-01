@@ -1,7 +1,5 @@
 import {
-  ArrowDownRight,
   ArrowRight,
-  ArrowUpRight,
   BarChart3,
   ChevronRight,
   Clock3,
@@ -281,7 +279,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container-site grid gap-10 py-12 lg:grid-cols-[1fr_300px] lg:py-16">
+      <section className="container-site grid gap-10 py-12 lg:grid-cols-[1fr_300px] lg:py-16" id="ultimas">
         <div>
           <SectionHeading eyebrow="ACOMPANHE" title="Últimas notícias" />
           <div className="divide-y divide-[#e2e7ec] border-y border-[#e2e7ec]">
