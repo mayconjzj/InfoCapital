@@ -20,7 +20,8 @@ const categories = [
 const stories = [
   {
     category: "ECONOMIA",
-    title: "Juros, inflação e câmbio: as variáveis que ajudam a explicar o humor do mercado",
+    title:
+      "Juros, inflação e câmbio: as variáveis que ajudam a explicar o humor do mercado",
     time: "Há 18 min",
     image:
       "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=900&q=85",
@@ -47,7 +48,8 @@ const stories = [
 const latest = [
   {
     category: "MERCADO",
-    title: "Bolsa, juros e dólar: entenda os indicadores que merecem atenção nesta semana",
+    title:
+      "Bolsa, juros e dólar: entenda os indicadores que merecem atenção nesta semana",
     time: "09:42",
   },
   {
@@ -57,7 +59,8 @@ const latest = [
   },
   {
     category: "ECONOMIA",
-    title: "Inflação de serviços: por que esse componente importa para a política monetária",
+    title:
+      "Inflação de serviços: por que esse componente importa para a política monetária",
     time: "08:56",
   },
   {
@@ -107,15 +110,17 @@ export default function Home() {
       <div className="bg-[#0b2033] text-white">
         <div className="container-site flex min-h-9 items-center justify-between gap-4 text-[10px] font-semibold tracking-[0.12em]">
           <p className="truncate text-white/75">INFORMAÇÃO QUE MOVE O MERCADO</p>
-          <p className="hidden shrink-0 text-white/55 sm:block">
-            EDIÇÃO DE DEMONSTRAÇÃO
-          </p>
+          <p className="hidden shrink-0 text-white/55 sm:block">EDIÇÃO DE DEMONSTRAÇÃO</p>
         </div>
       </div>
 
       <header className="border-b border-[#e2e7ec] bg-white">
         <div className="container-site flex h-[76px] items-center justify-between gap-5">
-          <a aria-label="InfoCapital — página inicial" className="flex items-center gap-3" href="#">
+          <a
+            aria-label="InfoCapital — página inicial"
+            className="flex items-center gap-3"
+            href="#"
+          >
             <span className="flex h-10 w-10 items-center justify-center rounded-sm bg-[#102b43] text-[#d7b77f]">
               <BarChart3 size={23} strokeWidth={2.2} />
             </span>
@@ -129,7 +134,10 @@ export default function Home() {
             </span>
           </a>
 
-          <nav aria-label="Navegação principal" className="hidden items-center gap-6 lg:flex">
+          <nav
+            aria-label="Navegação principal"
+            className="hidden items-center gap-6 lg:flex"
+          >
             {categories.map((category) => (
               <a
                 className="text-[12px] font-semibold text-[#425466] transition hover:text-[#a9824d]"
@@ -225,7 +233,10 @@ export default function Home() {
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
             {stories.slice(1).map((story) => (
-              <article className="grid grid-cols-[116px_1fr] gap-4 sm:grid-cols-1 lg:grid-cols-[132px_1fr]" key={story.title}>
+              <article
+                className="grid grid-cols-[116px_1fr] gap-4 sm:grid-cols-1 lg:grid-cols-[132px_1fr]"
+                key={story.title}
+              >
                 <div className="article-image-wrap h-[112px] rounded-sm sm:h-[130px] lg:h-[116px]">
                   <div
                     aria-hidden="true"
@@ -279,13 +290,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container-site grid gap-10 py-12 lg:grid-cols-[1fr_300px] lg:py-16" id="ultimas">
+      <section
+        className="container-site grid gap-10 py-12 lg:grid-cols-[1fr_300px] lg:py-16"
+        id="ultimas"
+      >
         <div>
           <SectionHeading eyebrow="ACOMPANHE" title="Últimas notícias" />
           <div className="divide-y divide-[#e2e7ec] border-y border-[#e2e7ec]">
             {latest.map((item, index) => (
               <article className="flex gap-4 py-5 sm:gap-6" key={item.title}>
-                <div className="hidden w-12 shrink-0 pt-1 text-[12px] font-bold tabular-nums text-[#b3bdc6] sm:block">
+                <div className="hidden w-12 shrink-0 pt-1 text-[12px] font-bold text-[#b3bdc6] tabular-nums sm:block">
                   0{index + 1}
                 </div>
                 <div className="min-w-0 flex-1">
@@ -320,21 +334,27 @@ export default function Home() {
                 <h3 className="text-[15px] leading-snug font-bold text-[#1b3042]">
                   Como analisar uma empresa antes de investir
                 </h3>
-                <p className="mt-2 text-[11px] text-[#8995a1]">Fundamentos · 8 min de leitura</p>
+                <p className="mt-2 text-[11px] text-[#8995a1]">
+                  Fundamentos · 8 min de leitura
+                </p>
               </article>
               <article className="border-l-2 border-[#d7dfe5] py-1 pl-4">
                 <p className="eyebrow mb-2">ECONOMIA</p>
                 <h3 className="text-[15px] leading-snug font-bold text-[#1b3042]">
                   Selic: o que é e por que ela afeta seus investimentos
                 </h3>
-                <p className="mt-2 text-[11px] text-[#8995a1]">Conceitos · 5 min de leitura</p>
+                <p className="mt-2 text-[11px] text-[#8995a1]">
+                  Conceitos · 5 min de leitura
+                </p>
               </article>
               <article className="border-l-2 border-[#d7dfe5] py-1 pl-4">
                 <p className="eyebrow mb-2">RENDA VARIÁVEL</p>
                 <h3 className="text-[15px] leading-snug font-bold text-[#1b3042]">
                   Dividendos: como avaliar a qualidade dos pagamentos
                 </h3>
-                <p className="mt-2 text-[11px] text-[#8995a1]">Ações · 6 min de leitura</p>
+                <p className="mt-2 text-[11px] text-[#8995a1]">
+                  Ações · 6 min de leitura
+                </p>
               </article>
             </div>
           </div>
@@ -345,8 +365,8 @@ export default function Home() {
               Informação com contexto. Mercado sem ruído.
             </h3>
             <p className="mt-3 text-xs leading-5 text-[#647587]">
-              Jornalismo para entender o que acontece com a economia, as empresas e
-              o seu patrimônio.
+              Jornalismo para entender o que acontece com a economia, as empresas e o seu
+              patrimônio.
             </p>
           </div>
         </aside>
@@ -368,7 +388,7 @@ export default function Home() {
               Seu e-mail
             </label>
             <input
-              className="h-12 min-w-0 flex-1 border border-[#dce3e8] bg-[#f9fafb] px-4 text-sm outline-none transition placeholder:text-[#9aa6b1] focus:border-[#31536d]"
+              className="h-12 min-w-0 flex-1 border border-[#dce3e8] bg-[#f9fafb] px-4 text-sm transition outline-none placeholder:text-[#9aa6b1] focus:border-[#31536d]"
               id="email"
               name="email"
               placeholder="Seu melhor e-mail"
@@ -391,15 +411,21 @@ export default function Home() {
               <p className="text-xl font-black tracking-[-0.06em]">
                 INFO<span className="font-semibold text-[#d7b77f]">CAPITAL</span>
               </p>
-              <p className="mt-2 text-xs text-white/55">
-                Informação que move o mercado.
-              </p>
+              <p className="mt-2 text-xs text-white/55">Informação que move o mercado.</p>
             </div>
             <div className="flex flex-wrap gap-x-6 gap-y-3 text-[11px] text-white/65">
-              <a className="hover:text-white" href="#ultimas">Notícias</a>
-              <a className="hover:text-white" href="#newsletter">Newsletter</a>
-              <a className="hover:text-white" href="#">Sobre</a>
-              <a className="hover:text-white" href="#">Contato</a>
+              <a className="hover:text-white" href="#ultimas">
+                Notícias
+              </a>
+              <a className="hover:text-white" href="#newsletter">
+                Newsletter
+              </a>
+              <a className="hover:text-white" href="#">
+                Sobre
+              </a>
+              <a className="hover:text-white" href="#">
+                Contato
+              </a>
             </div>
           </div>
           <div className="flex flex-col gap-2 pt-5 text-[10px] text-white/40 sm:flex-row sm:items-center sm:justify-between">
