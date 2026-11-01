@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4f6f8;
+  --foreground: #142536;
+  --navy: #102b43;
+  --navy-deep: #0b2033;
+  --blue: #1e4968;
+  --gold: #c7a56a;
+  --muted: #718091;
+  --line: #e2e7ec;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: #d9c49f;
+  color: var(--navy-deep);
+}
+
+.container-site {
+  width: min(1180px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.eyebrow {
+  color: #9b7845;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.article-image {
+  background-color: #d9e0e5;
+  background-position: center;
+  background-size: cover;
+  transition: transform 500ms ease;
+}
+
+.article-image-wrap {
+  overflow: hidden;
+  background: #d9e0e5;
+}
+
+.article-image-wrap:hover .article-image {
+  transform: scale(1.045);
+}
+
+.hero-overlay {
+  background: linear-gradient(90deg, rgb(8 25 40 / 92%) 0%, rgb(8 25 40 / 68%) 48%, rgb(8 25 40 / 8%) 100%);
+}
+
+@media (max-width: 640px) {
+  .container-site {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .hero-overlay {
+    background: linear-gradient(0deg, rgb(8 25 40 / 94%) 0%, rgb(8 25 40 / 58%) 62%, rgb(8 25 40 / 8%) 100%);
+  }
+}
